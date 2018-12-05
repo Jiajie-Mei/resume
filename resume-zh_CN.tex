@@ -10,6 +10,10 @@
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
 
+\newlist{InlineList}{enumerate*}{1}
+\setlist[InlineList]{label=(\roman*)}
+
+
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
@@ -22,9 +26,9 @@
   }
  
 \section{教育背景}
-\datedsubsection{\textbf{北京航空航天大学}, 北京}{2017 -- 至今}
+\datedsubsection{\textbf{北京航空航天大学}}{2017.09 -- 至今}
 \textit{在读硕士研究生}\ 计算机科学与技术, 预计 2020 年 1 月毕业
-\datedsubsection{\textbf{北京航空航天大学}, 北京}{2013 -- 2017}
+\datedsubsection{\textbf{北京航空航天大学}}{2013.09 -- 2017.07}
 \textit{学士}\ 计算机科学与技术
 
 % \section{\faUsers\ 实习/项目经历}
@@ -69,18 +73,26 @@
 \section{科研经历}
 \datedsubsection{\textbf{计算机新技术研究所}, 北航}{2016年8月 -- 至今}
 \begin{itemize}
-\item 知识图谱补全任务
-\begin{itemize}
-\item 多元关系下的关系实例重建任务及模型和算法，该工作发表在WWW2018上（第三作者），论文题目为《Scalable Instance Reconstruction in Knowledge Bases via Relatedness Affiliated Embedding》。
-\item 链接预测任务的准则以及预测协议，该工作发表在SIGIR2018上（第一作者），论文题目为《On Link Prediction in Knowledge Bases: Max-K Criterion and Prediction Protocols》。
-\end{itemize}
 \item 生成模型
 \begin{itemize}
-\item 使用生成对抗网络 (GAN) 学习合成数据的边界，最终目标是学习自然语言的边界，试图构造一个打分器，判断一句话是否属于自然语言。
-\item 将条件变分自编码器 (CVAE) 容纳到知识图谱表示学习任务中，试图将实体和关系嵌入到向量空间，期待模型在链接预测任务上有良好表现。
-\item 研究变分自编码器 (VAE) 中的KL散度消失问题，构造了一个最简单的VAE，研究它取得最优解时是否会产生KL散度消失问题。
-\item 研究VAE产生的图片模糊问题，试图提出一个在VAE框架下能生成高质量图片的模型。
+	\item 深入了解VAE，基于它做了以下研究：
+	\begin{InlineList}
+		\item 初步研究KL散度为零问题。我构造了一个最简单的VAE，通过推导目标函数的最优解，发现确实KL散度为零能导致极值。
+  		\item 将VAE用于知识库表示学习，并投AAAI2018，未录用。
+	\end{InlineList}
+\item 了解GAN。我构造了一个玩具数据集，使用多个判别器与一个生成器对抗，学习数据的边界。
 \end{itemize}
+
+\item 知识库
+\begin{itemize}
+
+\item 我们指出链接预测任务所使用的top-$k$评估准则难以在所有的链接预测任务上都取得比较好的查准率和查全率。我们提出使用max-$k$准则，并提出了采样协议和贪心协议。实验证明，max-$k$能比top-$k$有更好的F1表现和查准率表现。该工作发表在SIGIR2018上（第一作者）。
+
+% \item 2016.08 - 2016.10 关系实例重建任务想解决的是给定一个关系实例中的一个实体，预测出其余的实体。我们设想用一个二分类器预测两个实体之间是否有关联。作为实习生的我先后用C++语言实现基于logistic回归和单隐层的神经网络的分类器，而后自学支持自适应学习率的tensorflow框架，取得了95\%的查准率。该工作最终发表在WWW2018上（第三作者）。
+
+
+\end{itemize}
+
 \end{itemize}
 % \role{实习}{经理: 高富帅}
 % xxx后端开发
@@ -94,12 +106,13 @@
 \section{IT 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: Python >  Java == C > C++
+  \item 编程语言: Python > C/C++ > Java
   \item 平台: Linux
   \item 机器学习框架: Tensorflow
 \end{itemize}
 
 \section{获奖情况}
+\datedline{研究生国家奖学金}{2018年9月}
 \datedline{北京市优秀毕业生}{2017 年7 月 }
 \datedline{第七届蓝桥杯大赛北京赛区C/C++程序设计大赛A组二等奖}{2016 年3 月 }
 \datedline{2014-2015学年校级三好学生}{2015年10月}
