@@ -27,41 +27,28 @@
  
 \section{教育背景}
 \datedsubsection{\textbf{北京航空航天大学}}{2017.09 -- 2020.01}
-\textit{硕士}\ 生成模型与知识图谱（mentor：张日崇，Yongyi Mao）
+\textit{硕士}\ 生成模型与知识图谱
 \datedsubsection{\textbf{北京航空航天大学}}{2013.09 -- 2017.07}
-\textit{学士}\ 计算机科学与技术，本校保研排名29/120
+\textit{学士}\ 计算机科学与技术，保研综合排名29/238
 
 
 \section{科研经历}
-\datedsubsection{\textbf{计算机新技术研究所}, 北航}{2016.08 -- 2018.12}
+\datedsubsection{\textbf{计算机新技术研究所 (ACT)}， 北航，导师：张日崇\& Yongyi Mao}{2016.08 -- 2018.12}
 \begin{itemize}
-	\item 知识图谱
-\begin{itemize}
-
-\item 链接预测任务所使用的top-$k$评估准则难以让模型在所有的链接预测任务上都取得比较好的查准率和查全率。我们提出使用max-$k$准则，并提出了采样协议和贪心协议。实验证明，max-$k$能比top-$k$有更好的F1表现和查准率表现。该工作发表在SIGIR2018（On Link Prediction in Knowledge Bases: Max-K Criterion and Prediction Protocols）上（第一作者）。
-\end{itemize}
-\item 生成模型
-\begin{itemize}
-	\item 深入了解VAE，基于它做了以下研究：
-	\begin{InlineList}
-
-		\item 初步研究KL散度为零问题。我构造了一个最简单的VAE，通过推导目标函数的最优解，发现确实KL散度为零能导致极值。
-  		\item 将VAE用于知识库表示学习，并投稿AAAI2018，未录用。
-	\end{InlineList}
-\item 了解GAN。我构造了一个玩具数据集，使用多个生成器与一个判别器对抗，学习数据的边界。
-\end{itemize}
+	\item 知识图谱（已发表）：现有的KB embedding模型在执行实体预测任务时采用的是top-$k$准则，我观察到该准则不能在所有的实体预测任务上都取得均衡的查全率 (P) 和查准率 (R)。我提出使用max-$k$准则，并且指出对于理想模型，max-$k$准则的P, R, F1都至少和top-$k$的一样好。我提出了一个符合max-$k$的预测协议，即采样协议。我对采样协议进行渐近分析，导出了另一个max-$k$协议——贪心协议。该工作发表在SIGIR2018 (On Link Prediction in Knowledge Bases: Max-K Criterion and Prediction Protocols) (长文)。
+\item 生成模型（探索性）：
+\begin{InlineList}
+\item 我深入理解VAE，基于它做了一些探索性研究。例如，我初步研究过VAE用于句子生成时常会出现KL散度为零问题。相比现有的一些经验性方法，我尝试推导VAE优化目标的最优解。为此，我构造了一个最简单的线性VAE，推导得到KL为零所对应的解确实是一个驻点。
+\item 我了解GAN，基于它也做过一些探索性研究。我曾经想基于GAN构造一个句子打分器。在初步研究中，我构造了一个二维的玩具数据集，使用多个判别器与一个生成器对抗。但是最终生成器总是能近似生成玩具数据，判别器会失效。后来我意识到，这是GAN的优化目标必定会导致的情况。
+\end{InlineList}
 
 
 \end{itemize}
 
 \section{实习经历}
-\datedsubsection{\textbf{NLP中心}, 美团点评}{2018.12 -- 2019.03}
+\datedsubsection{\textbf{NLP中心}, 美团点评，导师：王金刚\&张富峥}{2018.12 -- 2019.03}
 \begin{itemize}
-\item 推荐理由生成（mentor：王金刚，张富峥）
-\begin{itemize}
-	\item 基于商户的用户评论以及用户查询，生成商户的推荐理由，辅助用户决策。该工作将用户查询通过BiLSTM编码，并且将该编码引入到Pointer-generator的编码器和解码器。实验结果表明该模型相比baseline更能生成查询相关的推荐理由生成，并且在ROUGE指标下取得了最好的结果。该工作已投稿IJCAI2019 (Query-Aware Tips Generation for Vertical Search)。
-\end{itemize}
-
+\item 推荐理由生成（已投稿）：基于商户的用户评论以及用户查询，生成商户的推荐理由，辅助用户决策。基于点评的搜索日志，我尝试了Pointer-generator模型，并且发现在encoder端引入selective gate能进一步提升ROUGE性能。用户查询则通过BiLSTM学习表示，并引入到编码器和解码器中。实验结果表明该模型更能生成查询相关的推荐理由。该工作已投稿IJCAI2019 (Query-Aware Tips Generation for Vertical Search)。
 
 \end{itemize}
 
@@ -80,8 +67,6 @@
 \datedline{研究生国家奖学金}{2018.09}
 \datedline{北京市优秀毕业生}{2017.07}
 \datedline{第七届蓝桥杯大赛北京赛区C/C++程序设计大赛A组二等奖}{2016.03}
-\datedline{2014-2015学年校级三好学生}{2015.10}
-\datedline{2013-2014学年国家励志奖学金}{2014.12}
 
 %% Reference
 %\newpage
