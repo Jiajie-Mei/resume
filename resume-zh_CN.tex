@@ -35,10 +35,10 @@
 \section{科研经历}
 \datedsubsection{\textbf{计算机新技术研究所 (ACT)}， 北航，导师：张日崇\& Yongyi Mao}{2016.08 -- 2018.12}
 \begin{itemize}
-	\item 知识图谱（已发表）：现有的KB embedding模型在执行实体预测任务时采用的是top-$k$准则，我观察到该准则不能在所有的实体预测任务上都取得均衡的查全率 (P) 和查准率 (R)。我提出使用max-$k$准则，并且指出对于理想模型，max-$k$准则的P, R, F1都至少和top-$k$的一样好。我提出了一个符合max-$k$的预测协议，即采样协议。我对采样协议进行渐近分析，导出了另一个max-$k$协议——贪心协议。该工作发表在SIGIR2018 (On Link Prediction in Knowledge Bases: Max-K Criterion and Prediction Protocols) (长文)。
+	\item 知识图谱（已发表）：现有的KB embedding模型在执行实体预测任务时采用的是top-$k$准则，我观察到该准则不能在所有的实体预测任务上都取得均衡的查准率 (P) 和查全率 (R)。我提出使用max-$k$准则，并且指出对于理想模型，max-$k$准则的P, R, F1都至少和top-$k$的一样好。我提出了一个符合max-$k$的预测协议，即采样协议。我对采样协议进行渐近分析，导出了另一个max-$k$协议——贪心协议。该工作发表在SIGIR2018 (On Link Prediction in Knowledge Bases: Max-K Criterion and Prediction Protocols) (长文)。
 \item 生成模型（探索性）：
 \begin{InlineList}
-\item 我深入理解VAE，基于它做了一些探索性研究。例如，我初步研究过VAE用于句子生成时常会出现KL散度为零问题。相比现有的一些经验性方法，我尝试推导VAE优化目标的最优解。为此，我构造了一个最简单的线性VAE，推导得到KL为零所对应的解确实是一个驻点。
+\item 我深入理解Variational AutoEncoder (VAE)，基于它做了一些探索性研究。例如，我初步研究过VAE用于句子生成时常会出现KL散度为零问题。相比现有的一些经验性方法，我尝试推导VAE优化目标的最优解。为此，我构造了一个最简单的线性VAE，推导得到KL为零所对应的解确实是一个驻点。
 \item 我了解GAN，基于它也做过一些探索性研究。我曾经想基于GAN构造一个句子打分器。在初步研究中，我构造了一个二维的玩具数据集，使用多个判别器与一个生成器对抗。但是最终生成器总是能近似生成玩具数据，判别器会失效。后来我意识到，这是GAN的优化目标必定会导致的情况。
 \end{InlineList}
 
@@ -48,7 +48,7 @@
 \section{实习经历}
 \datedsubsection{\textbf{NLP中心}, 美团点评，导师：王金刚\&张富峥}{2018.12 -- 2019.03}
 \begin{itemize}
-\item 推荐理由生成（已投稿）：基于商户的用户评论以及用户查询，生成商户的推荐理由，辅助用户决策。基于点评的搜索日志，我尝试了Pointer-generator模型，并且发现在encoder端引入selective gate能进一步提升ROUGE性能。用户查询则通过BiLSTM学习表示，并引入到编码器和解码器中。实验结果表明该模型更能生成查询相关的推荐理由。该工作已投稿IJCAI2019 (Query-Aware Tips Generation for Vertical Search)。
+\item 推荐理由生成（已投稿）：我使用Hive, Hadoop, Spark等工具从点评的搜索日志中导出数据集。我尝试了Pointer-generator模型（用户评论作为原文，推荐理由作为摘要），并且发现在encoder端引入selective gate能进一步提升ROUGE性能。用户查询则通过BiLSTM学习表示，并引入到encoder和decoder中。实验结果表明该模型更能生成查询相关的推荐理由。该工作已投稿IJCAI2019 (Query-Aware Tips Generation for Vertical Search)。
 
 \end{itemize}
 
